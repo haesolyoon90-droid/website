@@ -1,0 +1,30 @@
+<footer class="site-footer">
+  <div class="page-width">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="{{ routes.root_url }}">KODO</a>
+        <p class="footer-title">Sleep comes easier.</p>
+        <p class="footer-copy">Simple daily support for nights when your body is tired, but your mind is still running.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Explore</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          {% for link in linklists.footer.links %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
+        </nav>
+      </div>
+      <div>
+        <p class="eyebrow">Stay in the loop</p>
+        {% form 'customer' %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <label class="visually-hidden" for="FooterEmail">Email address</label>
+          <input id="FooterEmail" type="email" name="contact[email]" placeholder="Your email" required style="width:100%;min-height:46px;padding:0 12px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;margin-bottom:10px">
+          <button class="button button--light" type="submit">Join the list</button>
+        {% endform %}
+      </div>
+    </div>
+    <p class="footer-note">{{ shop.name }} · Supplements are not intended to diagnose, treat, cure, or prevent any disease. Review the product label and consult a healthcare professional where appropriate.</p>
+  </div>
+</footer>
+{% schema %}
+{"name":"Footer","settings":[]}
+{% endschema %}
