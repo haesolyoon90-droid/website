@@ -1,0 +1,13 @@
+{% case page.handle %}
+  {% when 'the-science' %}
+    {% render 'science-page-content' %}
+  {% when 'science' %}
+    {% render 'science-page-content' %}
+  {% when 'traceability' %}
+    {% render 'traceability-page-content' %}
+  {% else %}
+    <section class="editorial"><div class="page-width"><p class="section-kicker">KODO</p><h1 class="section-title">{{ page.title }}</h1><div style="max-width:720px;margin-top:30px">{{ page.content }}</div></div></section>
+{% endcase %}
+{% schema %}
+{"name":"Main page","settings":[]}
+{% endschema %}
