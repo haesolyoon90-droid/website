@@ -1,0 +1,10 @@
+<section class="ref-home ref-banner">
+  <div class="ref-banner__media">
+    {% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 2400 | image_tag: loading: 'lazy', widths: '750,1100,1600,2200,2400', alt: section.settings.statement }}{% endif %}
+  </div>
+  <div class="ref-banner__shade"></div>
+  <div class="ref-banner__inner"><p class="ref-banner__statement">{{ section.settings.statement }}</p></div>
+</section>
+{% schema %}
+{"name":"Statement image banner","settings":[{"type":"image_picker","id":"image","label":"Background image"},{"type":"textarea","id":"statement","label":"Statement","default":"Night Pack brings magnesium, L-Theanine and ashwagandha together in one simple evening ritual."}],"presets":[{"name":"Statement image banner"}]}
+{% endschema %}
