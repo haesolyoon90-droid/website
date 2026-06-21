@@ -1,0 +1,1 @@
+[{"name":"Brand settings","settings":[{"type":"text","id":"brand_name","label":"Brand name","default":"KODO"},{"type":"text","id":"support_email","label":"Support email","default":"hello@kodo-life.com"}]}]
