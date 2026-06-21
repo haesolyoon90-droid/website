@@ -1,0 +1,38 @@
+/* Keep the reference's composition, but restore KODO's clean, modern identity. */
+:root{--kodo-teal:#006f86;--kodo-blue:#197da8;--kodo-plum:#271238;--kodo-soft:#f7f4f5;--kodo-ink:#1a1820}
+.ref-home{background:var(--kodo-soft);color:var(--kodo-ink)}
+.site-header{background:#fff;border-bottom:1px solid rgba(0,111,134,.14)}
+.brand{font-family:var(--sans);font-weight:500;letter-spacing:.12em;color:var(--kodo-teal)}
+.desktop-nav{font-family:var(--sans);font-size:12px;letter-spacing:.05em;color:var(--kodo-ink)}
+.header-cta{border-color:var(--kodo-teal);color:var(--kodo-teal);font-family:var(--sans);font-weight:600}
+.header-cta:hover{background:var(--kodo-teal);color:#fff}
+.ref-hero{background:var(--kodo-plum);min-height:560px}
+.ref-hero__shade{background:linear-gradient(90deg,rgba(22,13,32,.5),rgba(0,54,72,.22) 72%,rgba(0,0,0,.08))}
+.ref-hero__inner{min-height:560px;padding:52px 34px}
+.ref-hero__title{font-family:var(--sans);font-size:clamp(52px,7.2vw,122px);font-weight:500;letter-spacing:-.065em;line-height:.82;max-width:960px;white-space:normal}
+.ref-hero__copy{font-family:var(--sans);font-size:18px;max-width:570px}
+.ref-products{padding:58px 30px 76px;background:#fff}
+.ref-products__heading{font-family:var(--sans);font-size:34px;font-weight:500;letter-spacing:-.04em;color:var(--kodo-teal)}
+.ref-outline-button{border-color:rgba(0,111,134,.5);color:var(--kodo-teal);font-family:var(--sans);font-weight:600}
+.ref-outline-button:hover{background:var(--kodo-teal);color:#fff}
+.ref-product-grid{gap:18px}
+.ref-product-card__media{background:#f4f1ef;aspect-ratio:.83}
+.ref-product-card__meta{font-family:var(--sans);padding-top:13px}
+.ref-product-card__name{font-weight:600;color:var(--kodo-ink)}
+.ref-product-card__price{color:var(--kodo-teal)}
+.ref-pack-placeholder{background:linear-gradient(145deg,#1b90bd,#006f86 64%,#193049);border-radius:1px}
+.ref-banner{min-height:470px;background:var(--kodo-plum)}
+.ref-banner__shade{background:linear-gradient(90deg,rgba(21,10,31,.52),rgba(14,45,70,.22))}
+.ref-banner__inner{min-height:470px}
+.ref-banner__statement{font-family:var(--sans);font-size:clamp(34px,4.3vw,62px);font-weight:500;letter-spacing:-.05em;line-height:1.03;max-width:940px}
+.ref-split{min-height:460px}
+.ref-split__media-wrap{min-height:460px;background:#e5eff0}
+.ref-split__copy{background:#eef5f5;padding:70px 58px}
+.ref-split__heading{font-family:var(--sans);font-size:clamp(36px,4vw,54px);font-weight:500;letter-spacing:-.05em;color:var(--kodo-teal)}
+.ref-split__text{font-family:var(--sans);color:#3e4a4e}
+.site-footer{background:var(--kodo-plum)}
+.footer-title{font-family:var(--sans);font-weight:500;letter-spacing:-.04em}
+.site-footer .eyebrow{font-family:var(--sans);font-size:18px;font-weight:600;letter-spacing:0}
+.site-footer input{font-family:var(--sans)!important;font-size:17px!important}
+.site-footer .button--light{font-family:var(--sans);font-size:18px;font-weight:600}
+@media(max-width:780px){.ref-hero,.ref-hero__inner{min-height:430px}.ref-hero__inner{padding:34px 18px}.ref-hero__title{font-size:56px}.ref-products__heading{font-size:30px}.ref-products{padding:42px 16px 56px}.ref-banner,.ref-banner__inner{min-height:350px}.ref-split__media-wrap{min-height:320px}.ref-split__copy{padding:50px 26px}}
