@@ -11,15 +11,15 @@ A Shopify Online Store 2.0 starter theme built for KODO's Night Pack launch.
 ## Included templates
 - Home page
 - Product page
-- `page.science` — The Science
-- `page.traceability` — Traceability
+- Standard pages with branded content for `/pages/science`, `/pages/the-science`, and `/pages/traceability`
 
 ## Shopify setup
-1. Upload this repository as a theme through Shopify CLI or GitHub integration.
-2. Create pages titled **The Science** and **Traceability**.
-3. Assign the `page.science` and `page.traceability` templates respectively.
+1. Connect this repository to an unpublished Shopify theme through Shopify CLI or GitHub integration.
+2. Create pages titled **The Science** and **Traceability** with handles `science` and `traceability` respectively.
+3. Use Shopify's standard page template for both pages; the theme renders their dedicated layouts from the page handle.
 4. Add your Night Pack product, imagery, price, and product metafields in Shopify Admin.
 5. Configure the main menu with: Shop Night Pack, The Science, Traceability.
+6. Add final ingredient-origin details and verify all testing/manufacturing language against final supplier documents before publishing.
 
 ## Notes
 This theme intentionally keeps health language supportive rather than making disease or guaranteed-outcome claims. Confirm all claims, ingredient doses, and quality statements against your final label and regulatory review before publishing.
