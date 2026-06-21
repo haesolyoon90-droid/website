@@ -1,0 +1,26 @@
+<section class="ref-home ref-products">
+  <div class="ref-products__bar">
+    <h2 class="ref-products__heading">{{ section.settings.heading }}</h2>
+    {% if section.settings.button_label != blank %}<a class="ref-outline-button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>{% endif %}
+  </div>
+  <div class="ref-product-grid">
+    {% for block in section.blocks %}
+      {% assign product = block.settings.product %}
+      <a class="ref-product-card" href="{% if product != blank %}{{ product.url }}{% else %}{{ block.settings.link }}{% endif %}" {{ block.shopify_attributes }}>
+        <div class="ref-product-card__media">
+          {% if block.settings.image != blank %}
+            {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '500,750,1000,1200', alt: block.settings.title }}
+          {% elsif product != blank and product.featured_image != blank %}
+            {{ product.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '500,750,1000,1200', alt: product.title }}
+          {% else %}
+            <div class="ref-product-card__fallback"><div class="ref-pack-placeholder"><small>KODO</small><strong>Night<br>Pack</strong><small>30 DAYS</small></div></div>
+          {% endif %}
+        </div>
+        <div class="ref-product-card__meta"><span class="ref-product-card__name">{% if product != blank %}{{ product.title }}{% else %}{{ block.settings.title }}{% endif %}</span><span class="ref-product-card__price">{% if product != blank %}{{ product.price | money }}{% else %}{{ block.settings.price }}{% endif %}</span></div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+{"name":"Featured products","settings":[{"type":"text","id":"heading","label":"Heading","default":"Featured products"},{"type":"text","id":"button_label","label":"Button label","default":"View all"},{"type":"url","id":"button_link","label":"Button link"}],"blocks":[{"type":"product","name":"Product","settings":[{"type":"product","id":"product","label":"Product"},{"type":"image_picker","id":"image","label":"Image override"},{"type":"text","id":"title","label":"Title","default":"Night Pack"},{"type":"text","id":"price","label":"Price","default":"$48.00 SGD"},{"type":"url","id":"link","label":"Link"}]}],"max_blocks":3,"presets":[{"name":"Featured products","blocks":[{"type":"product"},{"type":"product"},{"type":"product"}]}]}
+{% endschema %}
