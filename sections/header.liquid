@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="page-width header-inner">
+    <a class="brand" href="{{ routes.root_url }}" aria-label="KODO home">KODO</a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {% for link in linklists.main-menu.links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+    </nav>
+    <a class="header-cta" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
+  </div>
+</header>
+{% schema %}
+{"name":"Header","settings":[{"type":"text","id":"cta_label","label":"CTA label","default":"Shop Night Pack"},{"type":"url","id":"cta_link","label":"CTA link"}]}
+{% endschema %}
