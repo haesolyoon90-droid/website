@@ -1,0 +1,9 @@
+<section class="ref-home ref-split">
+  <div class="ref-split__media-wrap">
+    <div class="ref-split__media">{% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 1800 | image_tag: loading: 'lazy', widths: '750,1100,1500,1800', alt: section.settings.heading }}{% endif %}</div>
+  </div>
+  <div class="ref-split__copy"><div class="ref-split__copy-inner"><h2 class="ref-split__heading">{{ section.settings.heading }}</h2><p class="ref-split__text">{{ section.settings.copy }}</p>{% if section.settings.button_label != blank %}<a class="ref-outline-button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>{% endif %}</div></div>
+</section>
+{% schema %}
+{"name":"Split editorial","settings":[{"type":"image_picker","id":"image","label":"Image"},{"type":"text","id":"heading","label":"Heading","default":"Urban calm, reimagined"},{"type":"textarea","id":"copy","label":"Copy","default":"Made for people whose days run long and whose minds do not always switch off on cue."},{"type":"text","id":"button_label","label":"Button label","default":"Learn more"},{"type":"url","id":"button_link","label":"Button link"}],"presets":[{"name":"Split editorial"}]}
+{% endschema %}
